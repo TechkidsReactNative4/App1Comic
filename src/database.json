@@ -1,0 +1,51 @@
+{
+    "data": [
+        {
+            "id": 8,
+            "title": "LOK Comic #1: Giải ngố chứng khoán (P.1)",
+            "photos": [
+                "https://api.techkids.vn/reactnative/media/comic/lokcomic1giaingochungkhoanp1/Copy_of_1.jpg",
+                "https://api.techkids.vn/reactnative/media/comic/lokcomic1giaingochungkhoanp1/Copy_of_2.jpg",
+                "https://api.techkids.vn/reactnative/media/comic/lokcomic1giaingochungkhoanp1/Copy_of_3.jpg",
+                "https://api.techkids.vn/reactnative/media/comic/lokcomic1giaingochungkhoanp1/Copy_of_4.jpg",
+                "https://api.techkids.vn/reactnative/media/comic/lokcomic1giaingochungkhoanp1/Copy_of_5.jpg"
+            ],
+            "upload_date": "2018/05/30"
+        },
+        {
+            "id": 16,
+            "title": "LOK Comic #7 - Chất béo (P.1)",
+            "photos": [
+                "https://api.techkids.vn/reactnative/media/comic/lokcomic7-chatbeop1/02.jpg",
+                "https://api.techkids.vn/reactnative/media/comic/lokcomic7-chatbeop1/03.jpg",
+                "https://api.techkids.vn/reactnative/media/comic/lokcomic7-chatbeop1/04.jpg",
+                "https://api.techkids.vn/reactnative/media/comic/lokcomic7-chatbeop1/05.jpg"
+            ],
+            "upload_date": "2018/05/30"
+        },
+        {
+            "id": 17,
+            "title": "LOK Comic #8: Kháng Sinh",
+            "photos": [
+                "https://api.techkids.vn/reactnative/media/comic/abcd/101.png",
+                "https://api.techkids.vn/reactnative/media/comic/abcd/102.png",
+                "https://api.techkids.vn/reactnative/media/comic/abcd/103.png",
+                "https://api.techkids.vn/reactnative/media/comic/abcd/104.png",
+                "https://api.techkids.vn/reactnative/media/comic/abcd/105.png"
+            ],
+            "upload_date": "2018/05/31"
+        },
+        {
+            "id": 18,
+            "title": "LOK Comic #4 - Bệnh Ung Thư (Cancer)",
+            "photos": [
+                "https://api.techkids.vn/reactnative/media/comic/lokcomic4-benhungthucancer/cancer-01.png",
+                "https://api.techkids.vn/reactnative/media/comic/lokcomic4-benhungthucancer/cancer-02.png",
+                "https://api.techkids.vn/reactnative/media/comic/lokcomic4-benhungthucancer/cancer-03.png",
+                "https://api.techkids.vn/reactnative/media/comic/lokcomic4-benhungthucancer/cancer-04.png",
+                "https://api.techkids.vn/reactnative/media/comic/lokcomic4-benhungthucancer/cancer-05.png"
+            ],
+            "upload_date": "2018/05/31"
+        }
+    ]
+}
