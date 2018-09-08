@@ -1,17 +1,27 @@
 import React, { Component } from 'react';
 import {
-  Text, Image,
+  Text, Image, Dimensions,
   View,
 } from 'react-native';
 
 class AutoScaleImage extends Component {
-  state = {}
+  state = {
+    fixedW: Dimensions.get('window').width,
+    fixedH: 0,
+  }
+
   render() {
     Image.getSize(this.props.uriImage,
-      (realW, realH) => console.log(`realW: ${realW}, realH: ${realH}`))
+      (realW, realH) => this.setState(
+        { fixedH: this.state.fixedW * realH / realW }
+      ))
 
     return (
-      <View></View>
+      <Image style={{
+        width: this.state.fixedW,
+        height: this.state.fixedH
+      }}
+        source={{ uri: this.props.uriImage }} />
     );
   }
 }
