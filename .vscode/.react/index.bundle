@@ -61753,7 +61753,9 @@ __d(function (global, _require, module, exports, _dependencyMap) {
           {
             style: styles.container,
             onPress: function onPress() {
-              return _this2.props.navigation.navigate('ComicDetail');
+              return _this2.props.navigation.navigate('ComicDetail', {
+                comic: _this2.props.comic
+              });
             },
             __source: {
               fileName: _jsxFileName,
@@ -61767,7 +61769,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 14
+              lineNumber: 16
             }
           }),
           _react3.default.createElement(
@@ -61777,7 +61779,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
               numberOfLines: 2,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 17
+                lineNumber: 19
               }
             },
             this.props.comic.title
@@ -62266,6 +62268,10 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _reactNative = _require(_dependencyMap[2], "react-native");
 
+  var _AutoScaleImage = _require(_dependencyMap[3], "./AutoScaleImage");
+
+  var _AutoScaleImage2 = _interopRequireDefault(_AutoScaleImage);
+
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -62318,19 +62324,29 @@ __d(function (global, _require, module, exports, _dependencyMap) {
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 11
+              lineNumber: 13
             }
           },
-          _react3.default.createElement(
-            _reactNative.Text,
-            {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 12
-              }
+          _react3.default.createElement(_reactNative.FlatList, {
+            data: this.props.navigation.getParam('comic').photos,
+            renderItem: function renderItem(_ref2) {
+              var item = _ref2.item;
+              return _react3.default.createElement(_AutoScaleImage2.default, {
+                uriImage: item,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 17
+                }
+              });
             },
-            "ComicDetailScreen"
-          )
+            keyExtractor: function keyExtractor(item) {
+              return item;
+            },
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 15
+            }
+          })
         );
       }
     }]);
@@ -62339,7 +62355,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }(_react2.Component));
 
   exports.default = ComicDetailScreen;
-},500,[118,130,12],"src/ComicDetailScreen.js");
+},500,[118,130,12,620],"src/ComicDetailScreen.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -80744,6 +80760,90 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   exports.default = TouchableItem;
 },619,[118,130,294,12],"node_modules/react-navigation-tabs/node_modules/react-native-tab-view/src/TouchableItem.js");
+__d(function (global, _require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _react2 = _require(_dependencyMap[0], "react");
+
+  var _react3 = _interopRequireDefault(_react2);
+
+  var _index = _require(_dependencyMap[1], "./../node_modules/react-transform-hmr/lib/index.js");
+
+  var _index2 = _interopRequireDefault(_index);
+
+  var _jsxFileName = "/Users/qklahpita/Techkids/ReactNative 4/app1comic/src/AutoScaleImage.js";
+
+  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+  var _reactNative = _require(_dependencyMap[2], "react-native");
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _components = {
+    AutoScaleImage: {
+      displayName: "AutoScaleImage"
+    }
+  };
+
+  var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+    filename: "/Users/qklahpita/Techkids/ReactNative 4/app1comic/src/AutoScaleImage.js",
+    components: _components,
+    locals: [module],
+    imports: [_react3.default]
+  });
+
+  function _wrapComponent(id) {
+    return function (Component) {
+      return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+    };
+  }
+
+  var AutoScaleImage = _wrapComponent("AutoScaleImage")(function (_Component) {
+    _inherits(AutoScaleImage, _Component);
+
+    function AutoScaleImage() {
+      var _ref;
+
+      var _temp, _this, _ret;
+
+      _classCallCheck(this, AutoScaleImage);
+
+      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = AutoScaleImage.__proto__ || Object.getPrototypeOf(AutoScaleImage)).call.apply(_ref, [this].concat(args))), _this), _this.state = {}, _temp), _possibleConstructorReturn(_this, _ret);
+    }
+
+    _createClass(AutoScaleImage, [{
+      key: "render",
+      value: function render() {
+        _reactNative.Image.getSize(this.props.uriImage, function (realW, realH) {
+          return console.log("realW: " + realW + ", realH: " + realH);
+        });
+
+        return _react3.default.createElement(_reactNative.View, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 13
+          }
+        });
+      }
+    }]);
+
+    return AutoScaleImage;
+  }(_react2.Component));
+
+  exports.default = AutoScaleImage;
+},620,[118,130,12],"src/AutoScaleImage.js");
 require(52);
 require(11);
 //# sourceMappingURL=index.map

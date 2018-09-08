@@ -10,7 +10,9 @@ class ComicItem extends Component {
     return (
       <TouchableOpacity
         style={styles.container}
-        onPress={() => this.props.navigation.navigate('ComicDetail')}>
+        onPress={() => this.props.navigation.navigate('ComicDetail', {
+          comic: this.props.comic
+        })}>
         <Image
           style={styles.image}
           source={{ uri: this.props.comic.photos[0] }} />
