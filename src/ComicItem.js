@@ -1,20 +1,22 @@
 import React, { Component } from 'react';
 import {
   Text, StyleSheet, Dimensions,
-  View, Image
+  View, Image, TouchableOpacity
 } from 'react-native';
 
 class ComicItem extends Component {
   state = {}
   render() {
     return (
-      <View style={styles.container}>
+      <TouchableOpacity
+        style={styles.container}
+        onPress={() => this.props.navigation.navigate('ComicDetail')}>
         <Image
           style={styles.image}
           source={{ uri: this.props.comic.photos[0] }} />
         <Text style={styles.text}
           numberOfLines={2}>{this.props.comic.title}</Text>
-      </View>
+      </TouchableOpacity>
     );
   }
 }
